@@ -1,2 +1,5 @@
 repeat wait(5) until game:IsLoaded()
-loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/vouvy/CheckAFK/main/0'))()
+spawn(function()
+    loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/vouvy/CheckAFK/main/0'))()
+    loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/vouvy/CheckMelee/main/0'))()
+end)
