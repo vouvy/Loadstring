@@ -16,13 +16,20 @@ This script is a basic example of the Lua programming language. It was created f
 
 ## Code Example:
 ```lua
-repeat wait(5) until game:IsLoaded()
+-- Repeat the following block of code every 5 seconds until the game is fully loaded
+repeat
+    wait(5) -- Wait for 5 seconds
+until game:IsLoaded() -- Continue waiting until the game is loaded
 
+-- Create a new thread to run the following function concurrently
 spawn(function()
+    -- Fetch the code from the specified URL and execute it
     loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/vouvy/CheckAFK/main/CheckAFK.lua'))()
 end)
 
+-- Create another thread to run the following function concurrently
 spawn(function()
+    -- Fetch the code from the specified URL and execute it
     loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/vouvy/CheckMelee/main/CheckMelee.lua'))()
 end)
 ```
