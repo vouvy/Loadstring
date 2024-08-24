@@ -1,5 +1,3 @@
-repeat wait(10) until game:IsLoaded()
-
 spawn(function()
     loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/vouvy/CheckAFK/main/CheckAFK.lua'))()
 end)
